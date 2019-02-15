@@ -3,7 +3,10 @@ import { GlobalStyle } from './style.js';
 import { GlobalIconFontStyle } from './statics/iconfont/iconfont.js';
 import Header from './common/header/index'
 import store from './store/index'
+import {BrowserRouter, Route} from 'react-router-dom'
 import { Provider } from 'react-redux' 
+import Home from './page/home'
+import Detail from './page/detail'
 class App extends Component {
   render() {
     return (
@@ -13,7 +16,13 @@ class App extends Component {
         <GlobalIconFontStyle>
         </GlobalIconFontStyle>
         <Provider store={store}>
-          <Header></Header>
+          <BrowserRouter>
+            <div>
+              <Header></Header>
+              <Route path='/' exact component={Home}></Route>
+              <Route path='/detail' exact component={Detail}></Route>
+            </div>
+          </BrowserRouter>
         </Provider>
       </Fragment>
     );

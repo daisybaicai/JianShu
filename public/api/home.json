@@ -1,0 +1,53 @@
+{
+    "success": true,
+    "data": {
+        "topicList": [
+            {
+                "id": 1,
+                "title": "程序员联盟",
+                "imgUrl": "//upload.jianshu.io/users/upload_avatars/1783214/454c504e-6572-4250-b466-b65962d6e4cb.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240"
+            },
+            {
+                "id": 2,
+                "title": "谈心社",
+                "imgUrl": "//upload.jianshu.io/users/upload_avatars/9276238/ed42f01f-f921-4037-976e-91bc835a0c39?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240"
+            }
+        ],
+        "articleList": [
+            {
+                "id": 1,
+                "title": "被分享60万次的TED演讲：25岁前请逼自己成为这样的人",
+                "desc": "王小波在《黄金时代》中写过：“那年我二十一岁，在我一生的黄金时代，我有好多奢望。 我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，...",
+                "imgUrl": "//upload-images.jianshu.io/upload_images/12664040-3c5196f767a2db4b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
+            },
+            {
+                "id": 2,
+                "title": "北大毕业，凭什么不能去送外卖",
+                "desc": "春节假期结束，有人欣喜总算“逃回”了北上广，有人陷入了“家乡还是远方”的矛盾。 有读者告诉社长，每次回家，爸妈都劝她回老家工作： “女孩子还是离...",
+                "imgUrl": "//upload-images.jianshu.io/upload_images/9276238-cf054e284e2d9f4b?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+            }
+        ],
+         "recommendList": [
+            {
+                "id": 1,
+                "imgUrl": "//cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+            },
+            {
+                "id": 2,
+                "imgUrl": "//cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png"
+                }
+        ],
+        "writerList": [
+            {
+                "id": 1,
+                "imgUrl": " //upload.jianshu.io/users/upload_avatars/7416466/fc1a1a0d-e3c7-4bca-9720-028c5c9914f3.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
+                "writer": "老沈1"
+            },
+            {
+                "id": 2,
+                "imgUrl": "//upload.jianshu.io/users/upload_avatars/2558050/7761b285-2805-4534-9870-ba7dcc7538ec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
+                "writer": "阿栈"
+            }
+        ]
+    }
+}

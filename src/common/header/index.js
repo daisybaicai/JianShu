@@ -40,7 +40,7 @@ class Header extends Component {
     }
 
     render () {
-        const { focused, handleInputFocus, handleInputBlur} = this.props
+        const { focused, handleInputFocus, handleInputBlur, list} = this.props
         return (
             <HeaderWrapper>
                 <Logo></Logo>
@@ -57,7 +57,7 @@ class Header extends Component {
                         >
                             <NavSearch
                                 className={focused ? 'focused' : ''}
-                                onFocus={handleInputFocus}
+                                onFocus={()=>handleInputFocus(list)}
                                 onBlur={handleInputBlur}>
                             </NavSearch>
                         </CSSTransition>
@@ -90,8 +90,8 @@ const mapDispatchToProps = (dispatch) => {
         handleInputBlur() {
             dispatch(actionCreators.searchBlur())
         },
-        handleInputFocus() {
-            dispatch(actionCreators.getList())
+        handleInputFocus(list) {
+            (list.size===0)&&dispatch(actionCreators.getList())
             dispatch(actionCreators.searchFocus())
         },
         handleMouseEnter() {
@@ -101,8 +101,6 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(actionCreators.mouseLeave())
         },
         handleChangePage(page, totalPage) {
-            console.log(1111)
-            console.log(page,totalPage)
             if(page<totalPage) {
                 dispatch(actionCreators.changePage(page + 1))
             } else {
