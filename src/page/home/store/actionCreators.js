@@ -1,4 +1,4 @@
-import * as constants from './contacts'
+import * as constants from './contants'
 import axios from 'axios';
 import { fromJS } from 'immutable';
 

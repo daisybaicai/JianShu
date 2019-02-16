@@ -6,7 +6,8 @@ import store from './store/index'
 import {BrowserRouter, Route} from 'react-router-dom'
 import { Provider } from 'react-redux' 
 import Home from './page/home'
-import Detail from './page/detail'
+import Detail from './page/detail/loadable'
+import login from './page/login'
 class App extends Component {
   render() {
     return (
@@ -19,8 +20,9 @@ class App extends Component {
           <BrowserRouter>
             <div>
               <Header></Header>
+              <Route path='/login' exact component={login}></Route>
               <Route path='/' exact component={Home}></Route>
-              <Route path='/detail' exact component={Detail}></Route>
+              <Route path='/detail/:id' exact component={Detail}></Route>
             </div>
           </BrowserRouter>
         </Provider>

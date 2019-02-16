@@ -9,7 +9,7 @@ export const searchBlur = () => ({
     type: constants.SEARCH_BLUR
 })
 
-const changeList = (data) => ({
+export const changeList = (data) => ({
     type: constants.CHANGE_LIST,
     data: fromJS(data),
     totalPage: Math.ceil(data.length /10)

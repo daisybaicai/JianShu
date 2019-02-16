@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import { CSSTransition } from 'react-transition-group'
 import { SearchInfoItem,SearchInfoList,SearchInfoSwitch,SearchInfoTitle,SearchInfo,SearchWrapper, Button, Addition, HeaderWrapper, Logo, Nav , NavItem, NavSearch} from './style'
 import { actionCreators } from './store';
-
+import { actionCreators as loginactionCreators } from '../../page/login/store';
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
     getListArea () {
@@ -40,14 +41,17 @@ class Header extends Component {
     }
 
     render () {
-        const { focused, handleInputFocus, handleInputBlur, list} = this.props
+        const { login,focused, handleInputFocus, handleInputBlur, list} = this.props
         return (
             <HeaderWrapper>
-                <Logo></Logo>
+                <Link to='/'><Logo></Logo></Link>
                 <Nav>
                     <NavItem className='left active'>首页</NavItem>
                     <NavItem className='left'>下载APP</NavItem>
-                    <NavItem className='right'>登录</NavItem>
+                    {
+                        login ? <NavItem className='right' onClick={this.props.logout}>退出</NavItem> :
+                            <Link to='/login'><NavItem className='right'>登录</NavItem></Link>
+                    }
                     <NavItem className='right'><span className="iconfont">&#xe636;</span></NavItem>
                     <SearchWrapper>
                         <CSSTransition
@@ -77,6 +81,7 @@ class Header extends Component {
 const mapStateToProps = (state) => {
     return {
         //state.get('header').get('focused')
+        login: state.getIn(['login','login']),
         focused: state.getIn(['header','focused']),
         list: state.getIn(['header', 'list']),
         page: state.getIn(['header', 'page']),
@@ -106,6 +111,9 @@ const mapDispatchToProps = (dispatch) => {
             } else {
                 dispatch(actionCreators.changePage(1))
             }
+        },
+        logout() {
+            dispatch(loginactionCreators.logout())
         }
     }
 }

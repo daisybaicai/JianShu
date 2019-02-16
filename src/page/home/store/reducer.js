@@ -1,5 +1,5 @@
 import { fromJS } from "immutable";
-import * as constants from './contacts'
+import * as constants from './contants'
 const defaultState = fromJS({
     topicList: [],
     articleList: [],
