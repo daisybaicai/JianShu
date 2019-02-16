@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import logoPic from '../../statics/logo.png'
 export const HeaderWrapper = styled.div`
+    z-index: 1;
     position: relative;
     height: 56px;
     border-bottom: 1px solid #f0f0f0;
@@ -42,6 +43,7 @@ export const NavItem = styled.div`
 `
 
 export const SearchWrapper = styled.div`
+    background: white;
     position: relative;
     float: left;
     .slide-enter {
@@ -119,6 +121,7 @@ export const Button = styled.div`
 `
 
 export const SearchInfo = styled.div`
+    background: white;
     position: absolute;
     left: 0;
     top: 56px;
